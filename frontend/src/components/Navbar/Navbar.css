@@ -1,0 +1,171 @@
+/* Navbar Container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #e3c012; /* White background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%; /* Ensures full width */
+    margin: 0; /* Removes any default margins */
+    box-sizing: border-box; /* Ensures padding does not exceed width */
+}
+
+/* Logo */
+.navbar .logo {
+    width: 120px;
+    cursor: pointer;
+}
+
+/* Navigation Menu */
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.navbar-menu li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #3e4152; /* Dark gray */
+    transition: color 0.3s;
+}
+
+.navbar-menu li a:hover {
+    color: #fc8019; /* Swiggy orange */
+}
+
+/* Right Section */
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Search Bar */
+.navbar-search-input {
+    padding: 8px 15px;
+    font-size: 14px;
+    border: 1px solid #d3d3d3; /* Light border */
+    border-radius: 4px;
+    width: 300px;
+    transition: all 0.3s;
+}
+
+.navbar-search-input:focus {
+    border-color: #fc8019; /* Swiggy orange focus */
+    box-shadow: 0 0 5px rgba(252, 128, 25, 0.5);
+    outline: none;
+}
+
+/* Cart Icon */
+.navbar-cart {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-cart img {
+    width: 25px;
+    cursor: pointer;
+}
+
+.navbar-cart:hover img {
+    transform: scale(1.1); /* Slight zoom on hover */
+    transition: transform 0.3s;
+}
+
+.cart-dot {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 10px;
+    height: 10px;
+    background-color: #fc8019; /* Swiggy orange */
+    border-radius: 50%;
+}
+
+/* Login Button */
+.navbar-login {
+    background-color: transparent;
+    border: 1px solid #fc8019; /* Swiggy orange */
+    border-radius: 20px;
+    color: #fc8019;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.navbar-login:hover {
+    background-color: #fc8019; /* Swiggy orange */
+    color: #ffffff; /* White text */
+}
+
+/* Profile Section */
+.navbar-profile {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navbar-profile img {
+    width: 30px;
+    border-radius: 50%;
+}
+
+.navbar-profile-dropdown {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background: #ffffff;
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 1000;
+    list-style: none;
+    padding: 10px 0;
+    width: 150px;
+}
+
+.navbar-profile:hover .navbar-profile-dropdown {
+    display: block;
+}
+
+.navbar-profile-dropdown li {
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #3e4152;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.navbar-profile-dropdown li:hover {
+    background-color: #fcf2e8; /* Light orange */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar-search-input {
+        width: 200px;
+    }
+
+    .navbar-menu {
+        display: none; /* Hide menu on small screens */
+    }
+
+    .navbar-cart img {
+        width: 20px;
+    }
+}
